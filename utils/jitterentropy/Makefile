@@ -3,6 +3,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=jitterentropy
 PKG_VERSION:=1.2.2
 PKG_RELEASE:=1
+
 PKG_BUILD_DIR:=$(BUILD_DIR)/jitterentropy-rngd-$(PKG_VERSION)
 PKG_SOURCE:=v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/smuellerDD/jitterentropy-rngd/archive/refs/tags/
@@ -17,6 +18,7 @@ define Package/jitterentropy
   CATEGORY:=Utilities
   TITLE:=CPU Jitter Random Number Generator
   URL:=https://github.com/smuellerDD/jitterentropy-rngd
+  MAINTAINER:=https://github.com/stoickish
 endef
  
 define Package/jitterentropy/description
