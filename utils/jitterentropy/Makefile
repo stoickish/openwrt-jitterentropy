@@ -9,7 +9,9 @@ PKG_SOURCE:=v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/smuellerDD/jitterentropy-rngd/archive/refs/tags/
 PKG_HASH:=4fb5ba0f954815186411c20dd3fd988c3f009df9dcde9f59fc1b28bc31424d37
 PKG_LICENSE:=GPL-2.0-only
-TARGET_CFLAGS:=-O0
+
+TARGET_CFLAGS:=-Wextra -Wall -pedantic -fwrapv --param ssp-buffer-size=4 -fvisibility=hidden -fPIE -Wcast-align -Wmissing-field-initializers -Wshadow -Wswitch-enum -O0
+TARGET_LDFLAGS:=-Wl,-z,relro,-z,now -pie
  
 include $(INCLUDE_DIR)/package.mk
  
