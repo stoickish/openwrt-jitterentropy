@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=jitterentropy
 PKG_VERSION:=1.2.4
-PKG_RELEASE:=3
+PKG_RELEASE:=4
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/jitterentropy-rngd-$(PKG_VERSION)
 PKG_SOURCE:=v$(PKG_VERSION).tar.gz
@@ -13,6 +13,9 @@ PKG_LICENSE:=GPL-2.0-only BSD-3-Clause
 # These flags are simply replicated from the defaults here https://github.com/smuellerDD/jitterentropy-rngd/blob/master/Makefile
 TARGET_CFLAGS:=-Wextra -Wall -pedantic -fwrapv --param ssp-buffer-size=4 -fvisibility=hidden -fPIE -Wcast-align -Wmissing-field-initializers -Wshadow -Wswitch-enum -O0
 TARGET_LDFLAGS:=-Wl,-z,relro,-z,now -pie
+
+# Add a few other necessary constant definitions
+TARGET_CFLAGS:=$(TARGET_CFLAGS) -D_SC_LEVEL1_DCACHE_SIZE=188 -D_SC_LEVEL2_CACHE_SIZE=191 -D_SC_LEVEL3_CACHE_SIZE=194
 
 include $(INCLUDE_DIR)/package.mk
 
