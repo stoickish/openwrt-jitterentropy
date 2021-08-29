@@ -1,13 +1,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=jitterentropy
-PKG_VERSION:=1.2.3
-PKG_RELEASE:=2
+PKG_VERSION:=1.2.4
+PKG_RELEASE:=3
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/jitterentropy-rngd-$(PKG_VERSION)
 PKG_SOURCE:=v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/smuellerDD/jitterentropy-rngd/archive/refs/tags/
-PKG_HASH:=82baf7df94d11a7dd43240beabb1869d509c0c8d1075c55b60b091de73d87e7d
+PKG_HASH:=f86ccdac5de687eef115df85f81d579bc0c00c76a9941917b8c4606c5647e05e
 PKG_LICENSE:=GPL-2.0-only BSD-3-Clause
 
 # These flags are simply replicated from the defaults here https://github.com/smuellerDD/jitterentropy-rngd/blob/master/Makefile
