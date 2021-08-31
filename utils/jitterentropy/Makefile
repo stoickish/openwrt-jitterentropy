@@ -5,7 +5,7 @@ PKG_VERSION:=0113a4d726d6a0113134df1f612cd3d804617ff9
 PKG_RELEASE:=6
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/jitterentropy-rngd-$(PKG_VERSION)
-PKG_SOURCE:=v$(PKG_VERSION).zip
+PKG_SOURCE:=$(PKG_VERSION).zip
 PKG_SOURCE_URL:=https://github.com/smuellerDD/jitterentropy-rngd/archive/
 PKG_HASH:=e648d3b4b542da28dbf9f73d754f437361ca0eb3436845fe17a02a4795c4fec0
 PKG_CAT:=unzip
