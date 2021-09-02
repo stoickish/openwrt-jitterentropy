@@ -1,13 +1,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=jitterentropy
-PKG_VERSION:=0113a4d726d6a0113134df1f612cd3d804617ff9
-PKG_RELEASE:=6
+PKG_VERSION:=9d488e7b81c7b9e2a1fabcdd02ac8c9a48aa8b97
+PKG_RELEASE:=7
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/jitterentropy-rngd-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_VERSION).zip
 PKG_SOURCE_URL:=https://github.com/smuellerDD/jitterentropy-rngd/archive/
-PKG_HASH:=e648d3b4b542da28dbf9f73d754f437361ca0eb3436845fe17a02a4795c4fec0
+PKG_HASH:=aab743d340b015498ab7ded099f2872aab9608bafbf059a689395d2ff39e2d92
 PKG_CAT:=unzip
 PKG_LICENSE:=GPL-2.0-only BSD-3-Clause
 
