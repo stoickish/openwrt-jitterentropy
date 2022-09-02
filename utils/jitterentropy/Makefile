@@ -1,17 +1,17 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=jitterentropy
-PKG_VERSION:=1.2.7
-PKG_RELEASE:=10
+PKG_VERSION:=1.2.8
+PKG_RELEASE:=11
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/jitterentropy-rngd-$(PKG_VERSION)
 PKG_SOURCE:=v$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/smuellerDD/jitterentropy-rngd/archive/refs/tags/
-PKG_HASH:=4657c19ba7e5458a7b56d6565e72df79426b70f9c5ff170ad016b7cbef784559
+PKG_HASH:=444a3bd70fef165b6cc56bdd977a0774749431331545ba169a7f242d96d52a79
 PKG_LICENSE:=GPL-2.0-only BSD-3-Clause
 
 # These flags are simply replicated from the defaults here https://github.com/smuellerDD/jitterentropy-rngd/blob/master/Makefile
-TARGET_CFLAGS:=-Wextra -Wall -pedantic -fwrapv --param ssp-buffer-size=4 -fvisibility=hidden -fPIE -Wcast-align -Wmissing-field-initializers -Wshadow -Wswitch-enum -O0
+TARGET_CFLAGS:=-Wextra -Wall -pedantic -fwrapv --param ssp-buffer-size=4 -fvisibility=hidden -fPIE -Wcast-align -Wmissing-field-initializers -Wshadow -Wswitch-enum -O0 -fstack-protector-strong
 TARGET_LDFLAGS:=-Wl,-z,relro,-z,now -pie
 
 include $(INCLUDE_DIR)/package.mk
